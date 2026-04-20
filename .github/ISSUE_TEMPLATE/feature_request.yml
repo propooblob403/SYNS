@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose an improvement for the protocol MVP, docs, or developer workflow.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: Explain what is missing or what could be improved.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the feature or improvement you would like to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: value
+    attributes:
+      label: Why it matters
+      description: Explain how this change would help the SYNS protocol MVP or its users.
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints or notes
+      description: Include implementation notes, dependencies, or non-goals if relevant.

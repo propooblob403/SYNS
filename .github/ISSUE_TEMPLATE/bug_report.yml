@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible problem in the SYNS MVP.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the problem in one or two sentences.
+      placeholder: The lab replay freezes after the final signal step.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Describe what actually happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: List the shortest path to reproduce the issue.
+      placeholder: |
+        1. Open /lab
+        2. Select a scenario
+        3. Click replay
+        4. Observe the failure
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Extra context
+      description: Add screenshots, logs, environment details, or commit references if useful.
