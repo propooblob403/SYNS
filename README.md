@@ -15,6 +15,7 @@ This repository is built around one simple principle:
 - Website: [https://www.syns.mom](https://www.syns.mom)
 - X / Twitter: [https://x.com/Synaptic_Swarm](https://x.com/Synaptic_Swarm)
 - GitHub Repository: [https://github.com/propooblob403/SYNS.git](https://github.com/propooblob403/SYNS.git)
+- License: [MIT License](./LICENSE)
 
 ## Overview
 
@@ -202,21 +203,22 @@ Purpose:
 |-- public/
 |   `-- syns-logo.jpg
 |-- .env.example
+|-- LICENSE
 |-- package.json
 `-- README.md
 ```
 
-## Protocol Flow
+## Process Flow
 
 ```mermaid
-flowchart TD
-    A["Local signal event"] --> B["Node match scoring"]
-    B --> C["Capture threshold filter"]
-    C --> D["Node score accumulation"]
-    D --> E["Active node evaluation"]
-    E --> F["Convergence score"]
-    F --> G["Emergence score"]
-    G --> H["Verdict, snapshots, impacts"]
+graph TD
+    A[Local signal event] --> B[Node match scoring]
+    B --> C[Capture threshold filter]
+    C --> D[Node score accumulation]
+    D --> E[Active node evaluation]
+    E --> F[Convergence score]
+    F --> G[Emergence score]
+    G --> H[Verdict and impact output]
 ```
 
 ## Current Feature Surface
