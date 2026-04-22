@@ -172,8 +172,6 @@ Purpose:
 .
 |-- app/
 |   |-- api/
-|   |   |-- account/
-|   |   |-- markets/
 |   |   |-- nodes/
 |   |   |-- scenarios/
 |   |   `-- simulate/
@@ -196,12 +194,13 @@ Purpose:
 |   |   |-- engine.ts
 |   |   |-- scenarios.ts
 |   |   `-- types.ts
-|   |-- mock-data.ts
-|   |-- types.ts
 |   `-- utils.ts
-|-- middleware.ts
 |-- public/
 |   `-- syns-logo.jpg
+|-- scripts/
+|   `-- run-typecheck.mjs
+|-- tests/
+|   `-- syns-engine.test.ts
 |-- .env.example
 |-- LICENSE
 |-- package.json
@@ -234,7 +233,6 @@ graph TD
 - signal impact summaries
 - public API routes
 - protocol docs
-- legacy route redirection to the docs surface
 
 ### Not yet implemented
 
@@ -327,6 +325,12 @@ npm run build
 npm run start
 ```
 
+### Run the protocol tests
+
+```bash
+npm test
+```
+
 ## Project Status
 
 ### Current stage
@@ -347,9 +351,9 @@ npm run start
 
 ### In progress
 
-- repo cleanup from legacy scaffolding
 - stronger protocol-specific docs and visuals
 - broader scenario coverage
+- engine-level test coverage
 
 ### Planned next
 
@@ -400,6 +404,7 @@ npm run start
 - reusable UI components
 - public JSON endpoints
 - build-ready Next.js application structure
+- deterministic engine tests
 
 ## FAQ
 
@@ -414,10 +419,6 @@ No. The current scenarios are deterministic demo fixtures designed to make the p
 ### Why expose APIs in an MVP this early?
 
 Because a credible protocol MVP should expose its internal surface in a way that future tools and reviewers can inspect.
-
-### Why are there still legacy files in the repo?
-
-The repository is being migrated from earlier scaffolding. Legacy routes are currently redirected to the docs surface to keep the public UX consistent while cleanup continues.
 
 ### Does the emergence score guarantee predictive power?
 

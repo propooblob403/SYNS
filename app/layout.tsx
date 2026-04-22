@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 
-import { AccountProvider } from "@/components/account-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -19,11 +18,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <AccountProvider>
-          <SiteHeader />
-          <main>{children}</main>
-          <SiteFooter />
-        </AccountProvider>
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );
