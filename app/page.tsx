@@ -26,6 +26,13 @@ const repoModules = [
   "Interactive lab page for protocol-facing demos"
 ];
 
+const quickStartCommands = [
+  "git clone https://github.com/propooblob403/SYNS.git",
+  "cd SYNS",
+  "npm install",
+  "npm run dev"
+];
+
 const scenarioSnapshots = listScenarioSnapshots();
 
 export default function HomePage() {
@@ -76,6 +83,36 @@ export default function HomePage() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+
+              <div className="quickstart-panel">
+                <div className="quickstart-panel__header">
+                  <div>
+                    <span className="eyebrow">Quick Start</span>
+                    <strong>Run the public MVP locally</strong>
+                  </div>
+                  <span className="pill">v0.1.0</span>
+                </div>
+
+                <div className="quickstart-panel__code">
+                  {quickStartCommands.map((command) => (
+                    <code key={command}>{command}</code>
+                  ))}
+                </div>
+
+                <p className="quickstart-panel__note">
+                  Open <code>localhost:3000</code>, then inspect <code>/lab</code>, <code>/docs</code>, and the public API
+                  surface.
+                </p>
+
+                <div className="toolbar-actions quickstart-panel__actions">
+                  <Link className="button button--small button--ghost" href="https://github.com/propooblob403/SYNS">
+                    View GitHub
+                  </Link>
+                  <Link className="button button--small button--ghost" href="/docs">
+                    Open Docs
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

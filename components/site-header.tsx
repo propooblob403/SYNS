@@ -15,6 +15,7 @@ export function SiteHeader() {
           <Link href="/lab">Lab</Link>
           <Link href="/docs">Docs</Link>
           <Link href="/api/scenarios">API</Link>
+          <Link href="https://github.com/propooblob403/SYNS">GitHub</Link>
         </nav>
 
         <div className="site-header__actions">

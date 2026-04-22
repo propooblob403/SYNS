@@ -26,6 +26,8 @@ const endpoints = [
   "GET /api/simulate?scenario=<slug>&maxSignals=<n>"
 ];
 
+const verificationSteps = ["npm run lint", "npm run typecheck", "npm run build"];
+
 export default function DocsPage() {
   return (
     <div className="page-shell">
@@ -89,6 +91,47 @@ export default function DocsPage() {
               <Link className="button button--primary button--small" href="/lab">
                 Open lab
               </Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="section section--dark">
+        <div className="shell two-column two-column--syns">
+          <article className="content-block">
+            <span className="kicker">Verification</span>
+            <h2>Repository checks that already run cleanly</h2>
+            <div className="stack-list">
+              {verificationSteps.map((step) => (
+                <code key={step}>{step}</code>
+              ))}
+            </div>
+          </article>
+
+          <article className="content-block">
+            <span className="kicker">Release Surface</span>
+            <h2>Current public build status</h2>
+            <div className="stack-list stack-list--plain">
+              <div className="trace-row">
+                <div>
+                  <strong>Current release</strong>
+                  <p>Initial public SYNS MVP release.</p>
+                </div>
+                <div className="trace-row__meta">
+                  <span>tag</span>
+                  <strong>v0.1.0</strong>
+                </div>
+              </div>
+              <div className="trace-row">
+                <div>
+                  <strong>Build state</strong>
+                  <p>Lint, typecheck, and production build all pass on the current branch.</p>
+                </div>
+                <div className="trace-row__meta">
+                  <span>status</span>
+                  <strong>verified</strong>
+                </div>
+              </div>
             </div>
           </article>
         </div>
